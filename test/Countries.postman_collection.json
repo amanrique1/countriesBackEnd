@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "e5d965e6-98b0-4746-b4d0-07af05a9df47",
+		"name": "Countries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"country\": \"Chad\", \"population\": 10238807, \"continent\": \"África\", \"lifeExpectancy\": 50.7, \"purchasingPower\": 1704.06 }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/countries/Spain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries",
+						"Spain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"country\": \"Catalunia\",\r\n        \"population\": 7600000,\r\n        \"continent\": \"Europe\",\r\n        \"lifeExpectancy\": 82,\r\n        \"purchasingPower\": 123456\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/countries/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"5d76d8f8d416d449ae197c0f\",\"country\":\"Argentina\",\"population\":40301927,\"continent\":\"Europe\",\"lifeExpectancy\":75.3,\"purchasingPower\":12779.38}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/countries/Argentina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries",
+						"Argentina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries/Catalunia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries",
+						"Catalunia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
